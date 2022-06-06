@@ -1,0 +1,38 @@
+// App.scss
+@use "./assets/sass/_variables.scss" as *;
+
+.app {
+  .greeting {
+    text-align: center;
+
+    &__heading {
+      color: $color-black;
+    }
+
+    & > * {
+      margin: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+
+    .greeting {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__img {
+        height: 100px;
+      }
+    }
+  }
+}
